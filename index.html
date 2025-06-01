@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festivals of India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .festival-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .hamburger-line {
+            transition: all 0.3s ease;
+        }
+        .hamburger-active .line1 {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        .hamburger-active .line2 {
+            opacity: 0;
+        }
+        .hamburger-active .line3 {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        .fade-in {
+            animation: fadeIn 0.6s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-orange-600 shadow-lg fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-white text-2xl font-bold">Festivals of India</div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-white hover:text-orange-200">Home</a>
+                    <a href="#festivals" class="text-white hover:text-orange-200">Festivals</a>
+                    <a href="#regions" class="text-white hover:text-orange-200">Regions</a>
+                    <a href="#gallery" class="text-white hover:text-orange-200">Gallery</a>
+                    <a href="#contact" class="text-white hover:text-orange-200">Contact</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="hamburger" class="text-white focus:outline-none">
+                        <div class="w-6 h-0.5 bg-white mb-1 hamburger-line line1"></div>
+                        <div class="w-6 h-0.5 bg-white mb-1 hamburger-line line2"></div>
+                        <div class="w-6 h-0.5 bg-white hamburger-line line3"></div>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <a href="#home" class="block text-white py-2 hover:text-orange-200">Home</a>
+                <a href="#festivals" class="block text-white py-2 hover:text-orange-200">Festivals</a>
+                <a href="#regions" class="block text-white py-2 hover:text-orange-200">Regions</a>
+                <a href="#gallery" class="block text-white py-2 hover:text-orange-200">Gallery</a>
+                <a href="#contact" class="block text-white py-2 hover:text-orange-200">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-20 bg-gradient-to-r from-orange-400 to-red-500 text-white">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 fade-in">Celebrate India</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Discover the vibrant tapestry of Indian festivals that bring communities together in joy, tradition, and cultural celebration</p>
+            <button class="bg-white text-orange-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-orange-50 transition duration-300">Explore Festivals</button>
+        </div>
+    </section>
+
+    <section id="festivals" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Major Festivals</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="festival-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://imgs.search.brave.com/fhvh4U8gN_rPjCNnDJ6xeFiAYmGYrZiF5ktS3iseBHY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTAw/OTY4MzE2NC92ZWN0/b3IvZGl3YWxpLWZl/c3RpdmFsLWhvbGlk/YXktZGVzaWduLXdp/dGgtcGFwZXItY3V0/LXN0eWxlLW9mLWlu/ZGlhbi1yYW5nb2xp/LXB1cnBsZS1jb2xv/ci1vbi15ZWxsb3cu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVFOZjZfQlh0V3I1/a2t6bElDa3RIM1J3/OUFWLWdVaW1iOGpa/elpOU3dkd3c9">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Diwali</h3>
+                        <p class="text-gray-600 mb-4">The Festival of Lights celebrating the victory of light over darkness, good over evil. Families light diyas and burst crackers.</p>
+                        <span class="inline-block bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm">October/November</span>
+                    </div>
+                </div>
+                
+                <div class="festival-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://imgs.search.brave.com/UsrBW9ZqlT8vhN6E-XUJoaP-zAGQlOdOJFZxfbWtbmY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQw/MjQwMDg2MC9waG90/by9ob2xpLWZlc3Rp/dmFsLXNwbGFzaC1v/ci1zcGF0dGVyLW9m/LWNvbG91cnMtaW5k/aWFuLWZlc3RpdmFs/LW9mLWNvbG9ycy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/Wk1nRTBUS2Y5dWtu/eFZzV3V3OHVjUUNl/Q1E1WDItdEliSkh6/MTJOXzl1ND0">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Holi</h3>
+                        <p class="text-gray-600 mb-4">The Festival of Colors marking the arrival of spring. People play with colors, dance, and celebrate together.</p>
+                        <span class="inline-block bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">March</span>
+                    </div>
+                </div>
+                
+                <div class="festival-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://imgs.search.brave.com/L6O6ZWMvfNkLmIL7rKvt7vALKflrWRfXueKQSlIhLhY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/aGluZHVzdGFudGlt/ZXMuY29tL2h0LWlt/Zy9pbWcvMjAyNS8w/My8yOS9vcmlnaW5h/bC9jaGFpdHJhX25h/dnJhdHJpXzIwMjVf/NV8xNzQzMjM2NzE0/ODUxLmpwZw">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-teal-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Navratri</h3>
+                        <p class="text-gray-600 mb-4">Nine nights dedicated to Goddess Durga with traditional dances, fasting, and vibrant celebrations across India.</p>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">September/October</span>
+                    </div>
+                </div>
+                
+                <div class="festival-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://imgs.search.brave.com/2Rw602nifn8ohnzfAjnQH1Mdfx-JVhh10ZWQd31pDhU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vNjYvMjYyNjY2/LTA1MC03OTRFRjUx/MS9BLXdvbWFuLWFw/cGxpZXMtU2luZG9v/ci1vbi10aGUtc3Rh/dHVlLW9mLU1hLUdv/ZGRlc3MtRHVyZ2Et/ZHVyaW5nLXRoZS1T/aW5kb29yLUtoZWxh/LXJpdHVhbC1vbi10/aGUtbGFzdC1kYXkt/b2YtRHVyZ2EtUHVq/YS1hdC1SYXZpbmRy/YS1QYWxsaS1pbi1M/dWNrbm93LVV0dGFy/LVByYWRlc2gtb24t/V2VkbmVzZGF5LU9j/dG9iZXItMDUtMjAy/Mi5qcGc_dz00MDAm/aD0zMDAmYz1jcm9w">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-pink-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Durga Puja</h3>
+                        <p class="text-gray-600 mb-4">Bengal's biggest festival honoring Goddess Durga with elaborate pandals, cultural programs, and community feasts.</p>
+                        <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">September/October</span>
+                    </div>
+                </div>
+                
+                <div class="festival-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://imgs.search.brave.com/Vd-4Ed5dh8Bipv_fxM6qF6Kp82uiBjV3Mt1ZpL2FYGM/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC85NC8wOC9o/YXBweS1laWQtYWwt/Zml0ci1iYWNrZ3Jv/dW5kLXdpdGgtaXNs/YW1pYy12ZWN0b3It/NDYxMzk0MDguanBn">
+                    <div class="h-48 bg-gradient-to-br from-indigo-400 to-blue-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Eid</h3>
+                        <p class="text-gray-600 mb-4">Celebrated by Muslims across India with prayers, feasts, and sharing of gifts marking the end of Ramadan.</p>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Varies</span>
+                    </div>
+                </div>
+                
+                <div class="festival-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://imgs.search.brave.com/YMPbeZqOB_cP-_-XbHodb6iX_3-7sXBK9gf7i1PKmA4/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b25hbWZlc3RpdmFs/Lm9yZy9hc3NldHMv/aW1hZ2VzL2Jhbm5l/cjAxLmpwZw">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-green-500"></div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Onam</h3>
+                        <p class="text-gray-600 mb-4">Kerala's harvest festival with elaborate flower carpets, traditional dances, and the famous Onam Sadhya feast.</p>
+                        <span class="inline-block bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">August/September</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="regions" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Regional Celebrations</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="border-l-4 border-orange-500 pl-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">North India</h3>
+                        <p class="text-gray-600">Karva Chauth, Dussehra, Lohri, and Baisakhi showcase the rich cultural heritage of northern states with wheat harvest celebrations and devotional fervor.</p>
+                    </div>
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">South India</h3>
+                        <p class="text-gray-600">Pongal, Ugadi, Vishu, and Onam celebrate rice harvests, new years, and regional deities with traditional music, dance, and elaborate feasts.</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="border-l-4 border-blue-500 pl-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">East India</h3>
+                        <p class="text-gray-600">Durga Puja, Kali Puja, and Poila Boishakh highlight Bengali culture with artistic pandals, cultural performances, and literary celebrations.</p>
+                    </div>
+                    <div class="border-l-4 border-purple-500 pl-6">
+                        <h3 class="text-2xl font-bold mb-2 text-gray-800">West India</h3>
+                        <p class="text-gray-600">Ganesh Chaturthi, Gudi Padwa, and Navratri bring communities together with street processions, folk dances, and vibrant decorations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Festival Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://imgs.search.brave.com/dXiVmTQnmOIh0wlzzkWlV8TrC2faSlUAO-kcj9UudjA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vRXhqeWFs/a0RJS0hNaXlxUWJf/YjJWSTA3VkZfLXdu/RzhYVzhsQ1Z6Ym9t/ay9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/WldScC9ZUzVuWlhS/MGVXbHRZV2RsL2N5/NWpiMjB2YVdRdk5E/YzQvTVRReE5qQXdM/M0JvYjNSdi9MMk5s/YkdWaWNtRjBhVzVu/L0xYUm9aUzFvYjJ4/cExXWmwvYzNScGRt/RnNMVzltTFdOdi9i/Rzl5Y3k1cWNHY19j/ejAyL01USjROakV5/Sm5jOU1DWnIvUFRJ/d0ptTTljR2hSWTB0/Vi9WVEYyWjBwTFgx/Vm5SM3A0L1pWRjJk/alp3TVc5SlUzQkov/UWtWcU5YbERZMUk0/ZWtWby9XVDA">
+                <img src="https://imgs.search.brave.com/DHEzNvz7UIk3unAeBKr1SlxJeoDPNaOIVL8d1ZCKSO4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vQnJKeExu/VURSWHd0a0F1TGRU/NWp3MlZvam1zWHE2/RWZnQ0E1ZENOS0xj/Yy9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTlw/YldjdS9abkpsWlhC/cGF5NWpiMjB2L1pu/SmxaUzEyWldOMGIz/SXYvYUdGd2NIa3Ri/RzlvY21rdC9hVzVr/YVdGdUxXTjFiSFIx/L2NtRnNMV1psYzNS/cGRtRnMvTFdKaFky/dG5jbTkxYm1RdC9a/R1Z6YVdkdVh6RXdO/VFV0L01UWTJNVFV1/YW5CblAzTmwvYlhR/OVlXbHpYMmg1WW5K/cC9aQ1ozUFRjME1B">
+                <img src="https://imgs.search.brave.com/96ChLB2YoWwfp1DaALIZ-pgyiIzgcV96c5liXvcGnjQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWdz/LnNlYXJjaC5icmF2/ZS5jb20vM24tRXYz/cVIwU3M2TTM1VE1Q/dm1RTjdEMEZVRkU1/NENFSURuRFYwanY0/RS9yczpmaXQ6NTAw/OjA6MDowL2c6Y2Uv/YUhSMGNITTZMeTl0/WldScC9ZUzVwYzNS/dlkydHdhRzkwL2J5/NWpiMjB2YVdRdk1U/TTAvTVRRd09UQTNN/aTl3YUc5MC9ieTlu/Y205MWNDMXZaaTEx/L2JuSmxZMjluYm1s/NllXSnMvWlMxbVpX/MWhiR1Z6TFhOby9i/M2RwYm1jdGFHVnVi/bUV0L2FHRnVaSE11/YW5CblAzTTkvTmpF/eWVEWXhNaVozUFRB/bS9hejB5TUNaalBT/MHhVbEZIL1ZWUlhN/amRyWnpSVVREQlMv/Wm1WS1pYcEVkbU5X/Wkd4Uy9XRk4xUXpK/M2EwbGlVRUl0L1Zq/Zzk">
+                <img src="https://imgs.search.brave.com/fhvh4U8gN_rPjCNnDJ6xeFiAYmGYrZiF5ktS3iseBHY/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTAw/OTY4MzE2NC92ZWN0/b3IvZGl3YWxpLWZl/c3RpdmFsLWhvbGlk/YXktZGVzaWduLXdp/dGgtcGFwZXItY3V0/LXN0eWxlLW9mLWlu/ZGlhbi1yYW5nb2xp/LXB1cnBsZS1jb2xv/ci1vbi15ZWxsb3cu/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PVFOZjZfQlh0V3I1/a2t6bElDa3RIM1J3/OUFWLWdVaW1iOGpa/elpOU3dkd3c9">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Festival FAQs</h2>
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <div class="flex justify-between items-center cursor-pointer" onclick="toggleFaq(1)">
+                        <h3 class="text-xl font-semibold text-gray-800">When is the best time to visit India for festivals?</h3>
+                        <span id="faq-icon-1" class="text-2xl text-orange-600">+</span>
+                    </div>
+                    <div id="faq-content-1" class="hidden mt-4 text-gray-600">
+                        October to March is ideal as it covers Diwali, Durga Puja, Christmas, and many regional festivals with pleasant weather across most of India.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white">Home</a></li>
+                        <li><a href="#festivals" class="text-gray-300 hover:text-white">Festivals</a></li>
+                        <li><a href="#regions" class="text-gray-300 hover:text-white">Regions</a></li>
+                        <li><a href="#gallery" class="text-gray-300 hover:text-white">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger-active');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function toggleFaq(num) {
+            const content = document.getElementById(`faq-content-${num}`);
+            const icon = document.getElementById(`faq-icon-${num}`);
+            
+            content.classList.toggle('hidden');
+            icon.textContent = content.classList.contains('hidden') ? '+' : '-';
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                mobileMenu.classList.add('hidden');
+                hamburger.classList.remove('hamburger-active');
+            });
+        });
+    </script>
+</body>
+</html>
